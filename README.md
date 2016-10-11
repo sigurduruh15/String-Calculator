@@ -1,1 +1,4 @@
 # String-Calculator
+===================
+
+StringCalculator
