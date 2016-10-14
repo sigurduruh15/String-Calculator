@@ -34,7 +34,7 @@ public class CalculatorTest {
 			ex = e; 
 			System.out.println(ex);}
 	}
-		@Test
+	@Test
 	public void negativeNumber2(){
 		RuntimeException ex = null;
 		try {
@@ -42,6 +42,10 @@ public class CalculatorTest {
 		} catch(RuntimeException e) {
 			ex = e; 
 			System.out.println(ex);}
+	}
+	@Test
+	public void testNumberOverTh(){
+		assertEquals(2, Calculator.add("1001,2"));
 	}
 
 
