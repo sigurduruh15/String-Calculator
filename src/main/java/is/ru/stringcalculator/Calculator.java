@@ -6,12 +6,9 @@ import java.io.*;
 public class Calculator {
 
 	public static int add(String text){
-
-		String delim = ",";	
+	
 		if(text.contains("//")){
-			delim = text.substring(2,3);
-			text = text.replaceAll(delim, ",");
-			text = text.substring(4);
+			text = delimiter(text); 
 		}	
 
 		if(text.equals("")){
@@ -56,6 +53,16 @@ public class Calculator {
 	}
 	private static void throwException(List number){
     	throw new RuntimeException("Negatives not allowed: " + number.toString());
+    }
+    private static String delimiter(String text){
+
+    		String delim = ",";
+    		delim = text.substring(2,3);
+			text = text.replaceAll(delim, ",");
+			text = text.substring(4);
+
+			return text;
+
     }
 
 }
